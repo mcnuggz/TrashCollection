@@ -1,0 +1,20 @@
+﻿@model RoskaWastes.Models.PickupDayModel
+
+@{
+    ViewBag.Title = "ChangePickupDay";
+}
+<div class="row">
+    <h2>Change Pickup Day</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @using (Html.BeginForm("ChangeDay", "PickupDayController", FormMethod.Post, new { role = "form" }))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Day)
+                    @Html.DropDownListFor(m => m.Day, Model.Days, "-- Please select a new pickup day --", new { @class="form-control"})
+                </div>
+                <a href="@Url.Action("Index","Manage")"><input class="btn btn-success" value="Confirm" /></a>
+            }
+        </div>
+    </div>
+</div>

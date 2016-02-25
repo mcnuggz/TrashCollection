@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using RoskaWastes.Models;
 
+
 namespace RoskaWastes.Controllers
 {
     [Authorize]
@@ -65,6 +66,7 @@ namespace RoskaWastes.Controllers
 
             var userId = User.Identity.GetUserId();
             var model = new IndexViewModel
+            
             {
                 HasPassword = HasPassword(),
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),

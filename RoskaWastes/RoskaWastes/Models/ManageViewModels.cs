@@ -5,6 +5,7 @@ using Microsoft.Owin.Security;
 
 namespace RoskaWastes.Models
 {
+    
     public class IndexViewModel
     {
         public bool HasPassword { get; set; }

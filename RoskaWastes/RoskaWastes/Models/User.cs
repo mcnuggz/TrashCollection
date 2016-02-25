@@ -18,5 +18,6 @@ namespace RoskaWastes.Models
         public string ZipCode { get; set; }
         public string Email { get; set; }
         public string PickUpDay { get; set; }
+        public bool PaidBil { get { return PaidBil; } set { value = false; } }
     }
 }
