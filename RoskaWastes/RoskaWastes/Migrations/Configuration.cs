@@ -5,14 +5,14 @@ namespace RoskaWastes.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<RoskaWastes.Models.RoskaDB>
+    internal sealed class Configuration : DbMigrationsConfiguration<Models.RoskaDB>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(RoskaWastes.Models.RoskaDB context)
+        protected override void Seed(Models.RoskaDB context)
         {
             //  This method will be called after migrating to the latest version.
 

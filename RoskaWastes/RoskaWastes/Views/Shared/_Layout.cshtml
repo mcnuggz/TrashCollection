@@ -3,9 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Roska Waste Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <meta name="author" content="Ryan Webb & Kao Xiong" />
+    <meta name="description" content="**ASP.NET SCHOOL PROJECT** Waste Management Disposal" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -31,8 +33,8 @@
     <div class="container body-content">
         @RenderBody()
 
-        <div id="footer" class="navbar navbar-fixed-bottom text-center navbar-default">
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <div id="footer" class="navbar navbar-fixed-bottom text-center navbar-default hidden-xs">
+            <p>&copy; @DateTime.Now.Year - Roska Waste Management</p>
         </div>
     </div>
 
