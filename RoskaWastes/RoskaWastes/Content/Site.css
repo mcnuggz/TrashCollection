@@ -24,4 +24,14 @@ textarea {
 }
 #footer{
     color: white;
+    height: 40px;
+}
+#footer p{
+    padding-top: 20px;
+}
+.manageTable{
+    margin-top: 20px;
+}
+.buttons{
+    margin: 15px 10px 20px 0;
 }

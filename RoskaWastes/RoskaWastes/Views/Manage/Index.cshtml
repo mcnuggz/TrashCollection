@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-﻿@model RoskaWastes.Models.IndexViewModel
+@model RoskaWastes.Models.IndexViewModel
 
 @{
     ViewBag.Title = "Manage";
 }
-
-<h2>@ViewBag.Title.</h2>
+<br/>
+<h2>@ViewBag.Title Your Account</h2>
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
-    <h4>Change your account settings</h4>
-    <hr />
     <div class="row">
         <span class="col-md-10">
             Password:
@@ -26,111 +23,93 @@
             ]
         </span>
     </div>
-    <br />
+
     <div class="row">
-        <div class="form-group">
+        <div class="form-group buttons" >
             <div class="col-md-10">
                 <input class="btn btn-default btn-sm" value="Update Profile" id="profileUpdate" />
                 <a href="@Url.Action("ChangePickupDay","PickupDay")"><input class="btn btn-default btn-sm" value="Change Pickup Day" /></a>
             </div>
         </div>
     </div>
-</div>
-=======
-﻿@model RoskaWastes.Models.IndexViewModel
-@{
-    ViewBag.Title = "Manage";
-}
-<h2>@ViewBag.Title.</h2>
-<p class="text-success">@ViewBag.StatusMessage</p>
-<div>
-    <h4>Change your account settings</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>Password:</dt>
-        <dd>
-            [
-            @if (Model.HasPassword)
-            {
-                @Html.ActionLink("Change your password", "ChangePassword")
-            }
-            else
-            {
-                @Html.ActionLink("Create", "SetPassword")
-            }
-            ]
-        </dd>
-    </dl>
+
+    <div class="manageTable">
     <table border="0" class="col-md-7">
-        <tr>
-            <th>Month</th>
-            <th>Bill</th>
-            <th>Pay Bill</th>
-        </tr>
-        <tr>
-            <td>January</td>
-            <td>$40.00</td>
-            <td><div id="payJan">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>February</td>
-            <td>$40.00</td>
-            <td><div id="payFeb">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>March</td>
-            <td>$40.00</td>
-            <td><div id="payMar">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>April</td>
-            <td>$40.00</td>
-            <td><div id="payApr">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>May</td>
-            <td>$40.00</td>
-            <td><div id="payMay">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>June</td>
-            <td>$40.00</td>
-            <td><div id="payJun">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>July</td>
-            <td>$40.00</td>
-            <td><div id="payJul">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>August</td>
-            <td>$40.00</td>
-            <td><div id="payAug">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>September</td>
-            <td>$40.00</td>
-            <td><div id="paySep">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>October</td>
-            <td>$40.00</td>
-            <td><div id="payOct">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>November</td>
-            <td>$40.00</td>
-            <td><div id="payNov">Unpaid</div></td>
-        </tr>
-        <tr>
-            <td>December</td>
-            <td>$40.00</td>
-            <td><div id="payDec">Unpaid</div></td>
-        </tr>
+    <tr>
+        <th>Month</th>
+        <th>Bill</th>
+        <th>Pay Bill</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$40.00</td>
+        <td><div id="payJan">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>February</td>
+        <td>$40.00</td>
+        <td><div id="payFeb">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>March</td>
+        <td>$40.00</td>
+        <td><div id="payMar">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>April</td>
+        <td>$40.00</td>
+        <td><div id="payApr">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>May</td>
+        <td>$40.00</td>
+        <td><div id="payMay">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>June</td>
+        <td>$40.00</td>
+        <td><div id="payJun">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>July</td>
+        <td>$40.00</td>
+        <td><div id="payJul">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>August</td>
+        <td>$40.00</td>
+        <td><div id="payAug">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>September</td>
+        <td>$40.00</td>
+        <td><div id="paySep">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>October</td>
+        <td>$40.00</td>
+        <td><div id="payOct">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>November</td>
+        <td>$40.00</td>
+        <td><div id="payNov">Unpaid</div></td>
+    </tr>
+    <tr>
+        <td>December</td>
+        <td>$40.00</td>
+        <td><div id="payDec">Unpaid</div></td>
+    </tr>
     </table>
-    <button id="payBtn" class="pull-left" onclick="payButton()"><div id="payButtonMonth">Pay</div></button>
-    <hr />
-    <script type="text/javascript">
+    <button id="payBtn" class="pull-left btn btn-primary btn-sm" onclick="payButton()">
+        <div id="payButtonMonth">Pay</div>
+    </button>
+</div>
+    
+
+</div>
+
+<script type="text/javascript">
         function payButton() {
             @if (DateTime.Now.Month == 1) {
                 <text>
@@ -219,6 +198,3 @@
             }
         }
     </script>
-
-</div>
->>>>>>> 990bad664bbf10dd1ac882cba2c51514dbfaaeaa
