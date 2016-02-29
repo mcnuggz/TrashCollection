@@ -23,6 +23,10 @@ namespace RoskaWastes.Models
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
+        public string PickupDay { get; set; }
+        public bool IsWeekly { get; set; }
+        public bool OnVacation { get; set; }
+        public bool IsPaid { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

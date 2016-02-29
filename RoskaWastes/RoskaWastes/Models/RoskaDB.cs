@@ -12,7 +12,7 @@ namespace RoskaWastes.Models
         {
 
         }
-        public DbSet<User> users { get; set; }
+        public DbSet<Customer> users { get; set; }
         public DbSet<Employee> employees { get; set; }
     }
 }

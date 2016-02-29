@@ -107,6 +107,11 @@ namespace RoskaWastes.Models
         [DataType(DataType.PostalCode)]
         [Display(Name = "Zip Code")]
         public string ZipCode { get; set; }
+
+        public string PickupDay { get; set; }
+        public bool IsWeekly { get; set; }
+        public bool OnVacation { get; set; }
+        public bool IsPaid { get; set; }
     }
 
     public class ResetPasswordViewModel

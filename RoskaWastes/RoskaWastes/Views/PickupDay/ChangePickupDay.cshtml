@@ -3,9 +3,10 @@
 @{
     ViewBag.Title = "ChangePickupDay";
 }
+<br />
 <div class="row">
     <h2>Change Pickup Day</h2>
-    <div class="panel panel-default">
+    <div class="panel panel-default col-md-5">
         <div class="panel-body">
             @using (Html.BeginForm("ChangeDay", "PickupDayController", FormMethod.Post, new { role = "form" }))
             {
@@ -13,7 +14,15 @@
                     @Html.LabelFor(m => m.Day)
                     @Html.DropDownListFor(m => m.Day, Model.Days, "-- Please select a new pickup day --", new { @class="form-control"})
                 </div>
-                <a href="@Url.Action("Index","Manage")"><input class="btn btn-success" value="Confirm" /></a>
+                <div clss="checkbox">
+                    <label>
+                        @Html.CheckBox("Set To Weekly?", false) Set to Weekly?
+                    </label>
+                </div>
+                <br />
+                <div>
+                    <a href="@Url.Action("Index","Manage")"><input class="btn btn-success btn-sm" value="Confirm" /></a>
+                </div>
             }
         </div>
     </div>

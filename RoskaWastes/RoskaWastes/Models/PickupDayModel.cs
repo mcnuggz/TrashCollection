@@ -12,6 +12,8 @@ namespace RoskaWastes.Models
         [Required]
         [Display(Name ="Pickup Day")]
         public string Day { get; set; }
+        [Display(Name = "Set to Weekly Pickups?")]
+        public bool IsWeekly { get; set; }
 
         public IEnumerable<SelectListItem> Days { get; set; }
     }
