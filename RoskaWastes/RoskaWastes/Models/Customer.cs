@@ -1,26 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace RoskaWastes.Models
 {
     public class Customer
     {
-        public int CustomerID { get; set; }
-        public string UserName { get; set; }
+        public Customer()
+        {
+            OnVacation = false;
+            HasPaid = false;
+            IsWeekly = false;
+        }
+        public int CustomerId { get; set; }
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
+        [Display(Name = "Address")]
         public string Address { get; set; }
+        [Display(Name = "Address 2")]
         public string Address2 { get; set; }
+        [Display(Name = "City")]
         public string City { get; set; }
+        [Display(Name = "State")]
         public string State { get; set; }
+        [Display(Name = "Zip Code")]
         public string ZipCode { get; set; }
-        public string Email { get; set; }
-        public string PickUpDay { get; set; }
-        public bool PaidBil { get; set; }
+        [Display(Name = "Pickup Day")]
+        public string PickupDay { get; set; }
         public bool OnVacation { get; set; }
         public bool HasPaid { get; set; }
+        [Display(Name = "Weekly Pickups")]
+        public bool IsWeekly { get; set; }
+        public string UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
     }
 }
